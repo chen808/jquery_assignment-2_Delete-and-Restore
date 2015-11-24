@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Jquery Assignment 2: Dissappearing Ninja</title>
+	<meta charset = "utf-8">
+	
+		<!-- css style code here -->
+		<style>
+		#wrapper{
+			width: 850px;
+			height: 500px;
+			margin: 0 auto;
+			background-color: #8B0000;
+		}
+
+		h1{
+			color: white;
+			font-size: 1.3em;
+			margin: 0px 160px;
+		}
+
+		img{
+			width: 150px;
+			height: 150px;
+			margin: 10px 10px 10px 40px;
+			border: 2px solid #DC143C;
+			background-color: white;
+		}
+
+		button{
+			width: 100px;
+			background-color: #DC143C;
+			color: white;
+			display: block;
+			margin: 20px auto;
+
+			padding: 15px;
+		}
+		</style>
+
+	<!-- call jquery cdn from google -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		// once html is loaded then run jquery code
+		$(document).ready(function(){
+
+			// click the images to make it disappear
+			$( "img" ).click(function(){
+				$( this ).hide( "slow" );
+			});
+
+			// click to restore images
+			$( "#restoreButton" ).click(function(){
+				$( "img" ).show( 2000 );
+			});
+		});
+	</script>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+		<h1>Jquery Assignment 2: Make Image Disappear and Restore</h1>
+
+		<!-- images  -->
+		<img src="Boba-Fett-icon.png" alt="boba fett" />
+		<img src="Boba-Fett-icon.png" alt="boba fett" />
+		<img src="Boba-Fett-icon.png" alt="boba fett" />
+		<img src="Boba-Fett-icon.png" alt="boba fett" />
+		<img src="Boba-Fett-icon.png" alt="boba fett" />
+		<img src="Boba-Fett-icon.png" alt="boba fett" />
+		<img src="Boba-Fett-icon.png" alt="boba fett" />
+		<img src="Boba-Fett-icon.png" alt="boba fett" />
+
+		<!-- Restore button -->
+		<button id="restoreButton">Restore</button>
+	</div>
+
+</body>
+</html>
